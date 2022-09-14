@@ -18,11 +18,11 @@ CREATE TABLE Atendimento(
     ID INT NOT NULL AUTO_INCREMENT,
     Local VARCHAR(255),
     Data DATETIME,
-    PacienteID INT NOT NULL,
+    ClienteID INT NOT NULL,
     CRMMedico VARCHAR(20) NOT NULL,
     PRIMARY KEY (ID),
-    FOREIGN KEY (PacienteID) REFERENCES Paciente(ID),
-    FOREIGN KEY(CRMMedico) REFERENCES Medico(CRM)
+    FOREIGN KEY (ClienteID) REFERENCES Cliente(ID),
+    FOREIGN KEY(CRMProduto) REFERENCES Produto(CRM)
 );
 
 INSERT INTO Cliente (Nome,CPF) VALUES
@@ -53,5 +53,5 @@ SELECT * FROM Atendimento
 INNER JOIN Cliente
 ON Atendimento.ClienteID = Cliente.ID
 INNER JOIN Produto
-ON Atendimento.CRMMedico = Medico.CRM
+ON Atendimento.CRMProduto = Produto.CRM
 WHERE Cliente.Nome = 'Andre';
