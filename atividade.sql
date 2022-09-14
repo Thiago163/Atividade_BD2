@@ -1,4 +1,4 @@
-CREATE DATABASE Fornecedor_alimenticio;
+create DATABASE Fornecedor_alimenticio;
 USE Fornecedor_alimenticio;
 
 CREATE TABLE Cliente(
@@ -9,9 +9,9 @@ CREATE TABLE Cliente(
 );
 
 CREATE TABLE Produto(
-    CRM VARCHAR(20) NOT NULL,
+    ID VARCHAR(20) NOT NULL,
     Nome VARCHAR(255),
-    PRIMARY KEY(CRM)
+    PRIMARY KEY(iD)
 );
 
 CREATE TABLE Atendimento(
@@ -33,13 +33,13 @@ INSERT INTO Cliente (Nome,CPF) VALUES
 ('Otavio', '32132132132'),
 ('Thiago', '34534534534');
 
-INSERT INTO Produto (Nome,CRM) VALUES
-('Pipoca', '00001'),
-('Docê de Leite', '00002'),
-('Manteiga', '00001'),
-('Patél', '00002'),
-('Hot dog', '00002'),
-('Cachorro quente', '00003');
+INSERT INTO Produto (Nome,ID) VALUES
+('Pipoca', '01'),
+('Docê de Leite', '02'),
+('Manteiga', '03'),
+('Patél', '04'),
+('Hot dog', '00005'),
+('Cachorro quente', '00006');
 
 INSERT INTO Atendimento (Local, Data, PacienteID, CRMMedico)VALUES
 ('Supermercado', '2022-05-25 08:30:05',1,'00003'),
@@ -50,8 +50,8 @@ INSERT INTO Atendimento (Local, Data, PacienteID, CRMMedico)VALUES
 ('Barraquinha de hotdog', '2022-09-12 15:30:05',2,'00001');
 
 SELECT * FROM Atendimento
-INNER JOIN Paciente
-ON Atendimento.PacienteID = Paciente.ID
-INNER JOIN Medico
+INNER JOIN Cliente
+ON Atendimento.ClienteID = Cliente.ID
+INNER JOIN Produto
 ON Atendimento.CRMMedico = Medico.CRM
-WHERE Medico.Nome = 'Andre';
+WHERE Cliente.Nome = 'Andre';
