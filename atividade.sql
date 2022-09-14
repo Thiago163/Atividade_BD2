@@ -28,9 +28,7 @@ CREATE TABLE Atendimento(
 INSERT INTO Paciente (Nome,CPF) VALUES
 ('Romarinho', '12312312312'),
 ('Otavio', '32132132132'),
-('Thiago', '34534534534');
-
-INSERT INTO Paciente (Nome,CPF) VALUES
+('Andre', '0654654464'),
 ('Romarinho', '12312312312'),
 ('Otavio', '32132132132'),
 ('Thiago', '34534534534');
@@ -38,15 +36,18 @@ INSERT INTO Paciente (Nome,CPF) VALUES
 INSERT INTO Medico (Nome,CRM) VALUES
 ('Mario', '00001'),
 ('Andre', '00002'),
+('Mario', '00001'),
+('Andre', '00002'),
+('Andre', '00002'),
 ('Caio', '00003');
 
 INSERT INTO Atendimento (Local, Data, PacienteID, CRMMedico)VALUES
-('Etec Ermelinda', '2022-05-25 08:30:05',1,'00003'),
-('Postinho Santana', '2022-05-27 10:00:05',2,'00003'),
-('Etec Ermelinda', '2022-06-15 13:34:05',3,'00002'),
-('Postinho Santana', '2022-07-01 07:30:05',3,'00002'),
-('Etec Ermelinda', '2022-08-14 14:30:05',1,'00001'),
-('Postinho Santana', '2022-09-12 15:30:05',2,'00001');
+('Supermercado', '2022-05-25 08:30:05',1,'00003'),
+('Padaria', '2022-05-27 10:00:05',2,'00003'),
+('Restaurante', '2022-06-15 13:34:05',3,'00002'),
+('Lanchonete', '2022-07-01 07:30:05',3,'00002'),
+('Praça de alimentação', '2022-08-14 14:30:05',1,'00001'),
+('Barraquinha de hotdog', '2022-09-12 15:30:05',2,'00001');
 
 SELECT * FROM Atendimento
 INNER JOIN Paciente
