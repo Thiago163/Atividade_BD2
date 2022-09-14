@@ -1,14 +1,14 @@
-CREATE DATABASE Clinica;
-USE Clinica;
+CREATE DATABASE Fornecedor_alimenticio;
+USE Fornecedor_alimenticio;
 
-CREATE TABLE Paciente(
+CREATE TABLE Cliente(
     ID INT NOT NULL AUTO_INCREMENT,
     Nome VARCHAR(255),
     CPF VARCHAR(11),
     PRIMARY KEY (ID)
 );
 
-CREATE TABLE Medico(
+CREATE TABLE Produto(
     CRM VARCHAR(20) NOT NULL,
     Nome VARCHAR(255),
     PRIMARY KEY(CRM)
@@ -25,21 +25,21 @@ CREATE TABLE Atendimento(
     FOREIGN KEY(CRMMedico) REFERENCES Medico(CRM)
 );
 
-INSERT INTO Paciente (Nome,CPF) VALUES
+INSERT INTO Cliente (Nome,CPF) VALUES
 ('Romarinho', '12312312312'),
 ('Otavio', '32132132132'),
 ('Andre', '0654654464'),
-('Romarinho', '12312312312'),
+('Lourival', '12312312312'),
 ('Otavio', '32132132132'),
 ('Thiago', '34534534534');
 
-INSERT INTO Medico (Nome,CRM) VALUES
-('Mario', '00001'),
-('Andre', '00002'),
-('Mario', '00001'),
-('Andre', '00002'),
-('Andre', '00002'),
-('Caio', '00003');
+INSERT INTO Produto (Nome,CRM) VALUES
+('Pipoca', '00001'),
+('Docê de Leite', '00002'),
+('Manteiga', '00001'),
+('Patél', '00002'),
+('Hot dog', '00002'),
+('Cachorro quente', '00003');
 
 INSERT INTO Atendimento (Local, Data, PacienteID, CRMMedico)VALUES
 ('Supermercado', '2022-05-25 08:30:05',1,'00003'),
