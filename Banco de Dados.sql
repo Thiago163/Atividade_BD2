@@ -38,7 +38,7 @@ INSERT INTO Produto (Nome,ID) VALUES
 ('Pipoca', '01'),
 ('Docê de Leite', '02'),
 ('Manteiga', '03'),
-('Patél', '04'),
+('Pastél', '04'),
 ('Hot dog', '05'),
 ('Cachorro quente', '06');
 
@@ -48,7 +48,10 @@ INSERT INTO Atendimento (Local, Data, ClienteID, IDProduto)VALUES
 ('Restaurante', '2022-06-15 13:34:05','02', '02'),
 ('Lanchonete', '2022-07-01 07:30:05','01', '04'),
 ('Praça de alimentação', '2022-08-14 14:30:05','04', '06'),
-('Barraquinha de hotdog', '2022-09-12 15:30:05','05', '01');
+('Feira de Santana', '2022-09-12 15:30:05','05', '01');
 
 SELECT * FROM Atendimento
 INNER JOIN Cliente
+ON Atendimento.ClienteID = Cliente.ID
+INNER JOIN Produto
+ON Atendimento.IDProduto = Produto.ID;
