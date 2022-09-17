@@ -51,8 +51,8 @@ INSERT INTO Atendimento (Local, Data, ClienteID, IDProduto)VALUES
 ('Praça de alimentação', '2022-08-14 14:30:05','03', '02'),
 ('Feira de Santana', '2022-09-12 15:30:05','05', '01');
 
-SELECT * FROM Atendimento
+SELECT * FROM Atendimento as Relacionamentos
 INNER JOIN Cliente
-ON Atendimento.ClienteID = Cliente.ID
+ON Relacionamentos.ClienteID = Cliente.ID
 INNER JOIN Produto
-ON Atendimento.IDProduto = Produto.ID;
+ON Relacionamentos.IDProduto = Produto.ID;
