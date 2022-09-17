@@ -9,7 +9,7 @@ CREATE TABLE Cliente(
 );
 
 CREATE TABLE Produto(
-    ID INT NOT NULL AUTO_INCREMENT,
+    ID VARCHAR(2) NOT NULL,
     Nome VARCHAR(255),
     PRIMARY KEY(iD)
 );
@@ -19,7 +19,7 @@ CREATE TABLE Atendimento(
     Local VARCHAR(255),
     Data DATETIME,
     ClienteID INT NOT NULL,
-    IDProduto INT NOT NULL,
+    IDProduto VARCHAR(2) NOT NULL,
     PRIMARY KEY (ID),
     FOREIGN KEY (ClienteID) REFERENCES Cliente(ID),
     FOREIGN KEY(IDProduto) REFERENCES Produto(ID)
