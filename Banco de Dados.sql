@@ -46,9 +46,9 @@ INSERT INTO Atendimento (Local, Data, ClienteID, IDProduto)VALUES
 ('Padaria', '2022-05-27 10:00:05','02', '02'),
 ('Restaurante', '2022-06-15 13:34:05','03', '03'),
 ('Lanchonete', '2022-07-01 07:30:05','04', '04'),
-('Praça de alimentação', '2022-08-14 14:30:05','05', '05'),
-('Praça de alimentação', '2022-08-14 14:30:05','06', '06'),
-('Praça de alimentação', '2022-08-14 14:30:05','03', '02'),
+('Praça de alimentação Santana', '2022-08-14 14:30:05','05', '05'),
+('Shopping', '2022-08-14 14:30:05','06', '06'),
+('Praça de alimentação Barueri', '2022-08-14 14:30:05','03', '02'),
 ('Feira de Santana', '2022-09-12 15:30:05','05', '01');
 
 SELECT * FROM Atendimento as Relacionamentos
